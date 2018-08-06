@@ -48,9 +48,9 @@ begin
 	-- Process Description: Update next state based on input signals and current state
 	-- Process is asynchronous
     -- Additional details: Add additional details if needed
-	next_state : process (state)
+	next_state_proc : process (state)
 	begin
 		-- Insert logic HERE
-	end process next_state;
+	end process next_state_proc;
 	
 end rtl;
