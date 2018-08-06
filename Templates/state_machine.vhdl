@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
--- Add more if recquired
+-- Add more if required
 
 entity state_machine is
 port(
@@ -12,7 +12,8 @@ end state_machine;
 
 architecture rtl of state_machine is
 	-- Internal signal declaration goes HERE
-	-- For state machine it is rare that you will need internal signals
+    -- For state machine it is rare that you will need internal signals
+    
 	-- State signal declaration goes HERE
 	type state_type is (); -- Add all possible states
 	signal state, next_state : state_type; 
@@ -23,7 +24,7 @@ begin
 	-- Process Description: Change state to next state on rising clock edge
 	-- Process is synchronous
 	-- Additional details: Add additional details if needed
-	sync_state: process (clk)
+	sync_state: process (clk) -- synchronous processes should only have reset and clk in their sensitivity list
 	begin
 		if(rising_edge(clk)) then
 			if(reset = '1') then

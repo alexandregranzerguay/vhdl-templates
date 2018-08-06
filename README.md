@@ -8,3 +8,15 @@ Templates can be used for both Moore or Mealy finite state machines (FSMs).
 > systems and dataflow paths. Examples of FSM include control units and sequencers. -Xilinx
 
 [State Machine Template](./Templates/state_machine.vhdl)
+
+### Asynchronous Entity
+
+[Asynchronous Entity](./entity_async.vhdl)
+
+### Synchronous Entity
+
+[Synchronous Entity](./entity_sync.vhdl)
+
+### Entity Using Combinational Process
+
+[Entity With Combinational Process](./Templates/entity_combination.vhdl)
