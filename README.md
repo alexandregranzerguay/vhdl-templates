@@ -8,4 +8,4 @@ Templates can be used for both Moore or Mealy finite state machines (FSMs).
 > Finite State Machines (FSM) are sequential circuit used in many digital systems to control the behavior of
 > systems and dataflow paths. Examples of FSM include control units and sequencers. -Xilinx
 
-[State Machine Code](./Templates/state_machine.vhdl)
+[State Machine Template](./Templates/state_machine.vhdl)
