@@ -11,10 +11,8 @@ port(
 end state_machine;
 
 architecture rtl of state_machine is
-	-- Component declaration goes HERE
-	
 	-- Internal signal declaration goes HERE
-	
+	-- For state machine it is rare that you will need internal signals
 	-- State signal declaration goes HERE
 	type state_type is (); -- Add all possible states
 	signal state, next_state : state_type; 
