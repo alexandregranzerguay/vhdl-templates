@@ -5,8 +5,11 @@ use ieee.std_logic_unsigned.all;
 
 entity state_machine is
 port(
-	-- Add all your required ports here. 1 port + comment -> 1 line (except for reset and clk as they are genericly used together)
-	reset, clk: in std_logic -- Standard reset and clock signal
+	-- Add all your required ports here
+    -- I highly recommend grouping them in types and subtypes if need be
+
+    -- GENERIC
+    reset, clk: in std_logic -- Standard reset and clock signal
 );
 end state_machine;
 
