@@ -25,6 +25,18 @@ Templates can be used for both Moore or Mealy finite state machines (FSMs).
 
 [Testbench](./Templates/testbench.vhdl)
 
-## Examples
+## Example Files
 
 [Clock Frequency Divider](./Examples/freq_divide.vhdl)
+
+## Full-Scale Implementation
+I have used the example files as a demonstration of what a complete digital design could look like. I will walk you through the following components and will explain how they all work together.<br>
+__Note: this is not a tutorial but rather a walkthrough of an example of a complete digital design__
+
+**State Machine**: Central control unit for the digital system<br>
+**Transmitter**: Transmitter Unit<br>
+**Receiver**: Receiver Unit<br>
+**Frequency Divider**: Divide central clock frequency for use with the transmitter and receiver units<br>
+**Timer**: Timer used for state change in the state machine<br>
+
+**CURRENTLY WRITING**
