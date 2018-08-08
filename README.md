@@ -1,5 +1,5 @@
 # VHDL Quick-Start Templates!
-Templates for most common VHDL components, ex: state machines, basic components, test benchs, etc. Quickly get started while following a style guide recommend by Xilinx
+Templates for most common VHDL components, ex: state machines, basic components, test benchs, etc. Quickly get started while following a style guide recommended by Xilinx
 
 ## Templates:
 ### State Machine
