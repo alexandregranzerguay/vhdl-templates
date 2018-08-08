@@ -36,10 +36,10 @@ begin
     
 	-- STATE_MACHINE PORT MAP
 	state_machine_port: STATE_MACHINE port map (
-		RESET <= RESET,
-		CLOCK	<= CLOCK,
-        INPUT_SIGNAL <= INPUT_SIGNAL,
-        OUTPUT_SIGNAL <= OUTPUT_SIGNAL
+		RESET => RESET,
+		CLOCK => CLOCK,
+        INPUT_SIGNAL => INPUT_SIGNAL,
+        OUTPUT_SIGNAL => OUTPUT_SIGNAL
 	);
     
     -- Process Description: Testbench for UUT

@@ -1,7 +1,7 @@
 # VHDL Quick-Start Templates!
 Templates for most common VHDL components, ex: state machines, basic components, test benchs, etc. Quickly get started while following a style guide recommended by Xilinx
 
-## Templates:
+## Templates
 ### State Machine
 Templates can be used for both Moore or Mealy finite state machines (FSMs).
 > Finite State Machines (FSM) are sequential circuit used in many digital systems to control the behavior of
