@@ -1,17 +1,15 @@
+------------------------------------------------
+-- THIS IS A TESTBENCH                        --
+-- CREATOR:                                   --
+-- OWNER:                                     --
+------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
 entity testbench is
-port(
-    -- INPUTS
-    RESET, CLOCK: in std_logic;
-    INPUT_SIGNAL : in std_logic;
-    
-    -- OUTPUTS
-    OUTPUT_SIGNAL : in std_logic
-);
+-- MUST LEAVE EMPTY FOR TESTBENCH
 end testbench;
 
 architecture rtl of testbench is
@@ -32,7 +30,6 @@ architecture rtl of testbench is
 begin
 
 	-- Instantiate the Unit Under Test (UUT)
-    -- note: always maintian 1 line for 1 port connection for readability
     
 	-- STATE_MACHINE PORT MAP
 	state_machine_port: STATE_MACHINE port map (
@@ -42,6 +39,15 @@ begin
         OUTPUT_SIGNAL => OUTPUT_SIGNAL
 	);
     
+    -- Internal signal declaration goes HERE
+    signal RESET, CLOCK : std_logic;
+
+    -- inputs for UUT
+    signal INPUT_SIGNAL : std_logic;
+
+    -- outputs for UUT
+    signal OUTPUT_SIGNAL : std_logic;
+
     -- Process Description: Testbench for UUT
 	-- Additional details: Add additional details if needed
 	tb: process
