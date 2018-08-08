@@ -31,7 +31,7 @@ Templates can be used for both Moore or Mealy finite state machines (FSMs).
 
 ## Full-Scale Implementation
 I have used the example files as a demonstration of what a complete digital design could look like. I will walk you through the following components and will explain how they all work together.<br>
-__Note: this is not a tutorial but rather a walkthrough of an example of a complete digital design__
+_Note: this is not a tutorial but rather a walkthrough of an example of a complete digital design_
 
 **State Machine**: Central control unit for the digital system<br>
 **Transmitter**: Transmitter Unit<br>
