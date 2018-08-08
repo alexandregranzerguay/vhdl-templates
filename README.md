@@ -21,6 +21,10 @@ Templates can be used for both Moore or Mealy finite state machines (FSMs).
 
 [Entity With Combinational Process](./Templates/entity_combination.vhdl)
 
+### Testbench
+
+[Testbench](./Templates/testbench.vhdl)
+
 ## Examples
 
 [Clock Frequency Divider](./Examples/freq_divide.vhdl)
