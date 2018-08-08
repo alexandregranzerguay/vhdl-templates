@@ -11,11 +11,11 @@ Templates can be used for both Moore or Mealy finite state machines (FSMs).
 
 ### Asynchronous Entity
 
-[Asynchronous Entity](./entity_async.vhdl)
+[Asynchronous Entity](./Templates/entity_async.vhdl)
 
 ### Synchronous Entity
 
-[Synchronous Entity](./entity_sync.vhdl)
+[Synchronous Entity](./Templates/entity_sync.vhdl)
 
 ### Entity Using Combinational Process
 
