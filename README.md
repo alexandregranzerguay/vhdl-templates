@@ -1,5 +1,7 @@
 # VHDL Quick-Start Templates!
-Templates for most common VHDL components, ex: state machines, basic components, test benchs, etc. Quickly get started while following a style guide recommended by Xilinx
+Templates for most common VHDL components, ex: state machines, basic components, test benchs, etc. Quickly get started while following a style guide recommended by Xilinx.
+
+I have also included a [Demo](#full-scale-implementation) showing how these different templates can be used together to build a complex system in seconds.
 
 ## Templates
 ### State Machine
@@ -38,5 +40,6 @@ _Note: this is not a tutorial but rather a walkthrough of an example of a comple
 **Receiver**: Receiver Unit<br>
 **Frequency Divider**: Divide central clock frequency for use with the transmitter and receiver units<br>
 **Timer**: Timer used for state change in the state machine<br>
+**Testbench**: All design tests<br>
 
 **CURRENTLY WRITING**
