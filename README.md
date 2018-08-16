@@ -3,6 +3,18 @@ Templates for most common VHDL components, ex: state machines, basic components,
 
 I have also included a [Demo](#full-scale-implementation) showing how these different templates can be used together to build a complex system in seconds.
 
+
+## Resources
+
+Great place to get a good idea of proper VHDL coding practices
+https://webdocs.cs.ualberta.ca/~amaral/courses/329/labs/VHDL_Guideline.html
+
+The encyclopedia of VHDL. Large database with pretty much everything you need to know.
+https://www.ics.uci.edu/~jmoorkan/vhdlref/
+
+For the more interested... <br>
+This is a great explanation of the wonders of a 2-process VHDL entity, one being combinational and another being sequential.
+https://www.gaisler.com/doc/vhdl2proc.pdf
 ## Templates
 ### State Machine
 Templates can be used for both Moore or Mealy finite state machines (FSMs).
@@ -27,7 +39,7 @@ Templates can be used for both Moore or Mealy finite state machines (FSMs).
 
 [Testbench](./Templates/testbench.vhdl)
 
-## Example Files
+## Example Files/Useful Files
 
 [Clock Frequency Divider](./Examples/freq_divide.vhdl)
 
@@ -38,8 +50,9 @@ _Note: this is not a tutorial but rather a walkthrough of an example of a comple
 **State Machine**: Central control unit for the digital system<br>
 **Transmitter**: Transmitter Unit<br>
 **Receiver**: Receiver Unit<br>
-**Frequency Divider**: Divide central clock frequency for use with the transmitter and receiver units<br>
+**Transmitter Clock (Frequency Divider)**: Divide central clock frequency for the transmitter unit<br>
 **Timer**: Timer used for state change in the state machine<br>
+**System Link**: File to import and link all different entities. This is the Unit Under Test (UUT) in the testbench.<br>
 **Testbench**: All design tests<br>
 
-**CURRENTLY WRITING**
+**CURRENTLY WRITING MORE CONTENT**

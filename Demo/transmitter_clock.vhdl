@@ -2,23 +2,23 @@ library ieee ;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-entity frequency_divider is
+entity transmitter_clock is
 port(
 	-- INPUTS
 	-- input data received
-	CLOCK, RESET : in std_logic;
+	clock, reset : in std_logic;
 	
 	-- OUTPUTs
 	-- output signals to Transmitter
-	NEW_CLOCK : out std_logic
+	new_clock : out std_logic
 );
-end frequency_divider;
+end transmitter_clock;
 
 architecture rtl of frequency_divider is
 	-- Internal signal declaration goes HERE
 	
 	-- the frequency of the input CLOCK
-	signal division_factor : integer := 3;
+	signal division_factor : integer := 2;
 	
 	-- counter is updated based on CLOCK
 	signal counter : integer := 1;
@@ -30,12 +30,12 @@ begin
 	-- Process Description: Updates Counter
 	-- Process is synchronous
 	-- Additional details:
-	CLK_recovery: process (RESET, CLOCK)
+	new_clock_process: process (reset, clock)
 	begin
-		if(RESET = '1') then
+		if(reset = '1') then
 			counter <= 1;
 			new_clock_temp <= '0';
-		elsif(rising_edge(CLOCK))then
+		elsif(rising_edge(clock))then
 			if(counter = division_factor) then
 				new_clock_temp <= not(new_clock_temp);
 				counter <= 1;
@@ -43,7 +43,7 @@ begin
 				counter <= counter + 1;
 			end if;
 		end if;
-		NEW_CLOCK <= new_clock_temp;
-	end process CLK_recovery;
+		new_clock <= new_clock_temp;
+	end process new_clock_process;
 
 end rtl;
