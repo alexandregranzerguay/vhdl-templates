@@ -35,8 +35,8 @@ begin
 	state_machine_port: STATE_MACHINE port map (
 		RESET => RESET,
 		CLOCK => CLOCK,
-      INPUT_SIGNAL => INPUT_SIGNAL,
-      OUTPUT_SIGNAL => OUTPUT_SIGNAL
+        INPUT_SIGNAL => INPUT_SIGNAL,
+        OUTPUT_SIGNAL => OUTPUT_SIGNAL
 	);
     
     -- Internal signal declaration goes HERE

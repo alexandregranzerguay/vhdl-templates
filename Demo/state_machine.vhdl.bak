@@ -8,24 +8,18 @@ port(
 	-- Add all your required ports here
 
     -- GENERIC
-    reset, clock: in std_logic;
+    reset, clk: in std_logic;
 
     -- INPUTS
     -- signals from Receiver
     received_signal: in std_logic;
-	 
-	 -- signals from Timer
-	 resetting_time, no_signal_timeout: in std_logic;
 
     -- OUTPUTS
     -- signals to Receiver
     reset_rx, start_rx: out std_logic;
 
     -- signals to Transmitter
-    reset_tx, start_tx: out std_logic;
-	 
-	 -- signals to Timer
-	 start_timer_reset, start_timer_timeout, reset_timer: out std_logic
+    reset_tx, start_tx: out std_logic
 
 );
 end state_machine;
@@ -35,7 +29,7 @@ architecture rtl of state_machine is
     -- For state machine it is rare that you will need internal signals
     
 	-- State signal declaration goes HERE
-	type state_type is (reset_state, starting, communicating); -- Add all possible states
+	type state_type is (reset, starting, communicating); -- Add all possible states
 	signal state, next_state : state_type; 
 
 begin
@@ -44,9 +38,9 @@ begin
 	-- Process Description: Change state to next state on rising clock edge
 	-- Process is synchronous
 	-- Additional details: Add additional details if needed
-	sync_state: process (clock) -- synchronous processes should only have reset and clock in their sensitivity list
+	sync_state: process (clk) -- synchronous processes should only have reset and clk in their sensitivity list
 	begin
-		if(rising_edge(clock)) then
+		if(rising_edge(clk)) then
 			if(reset = '1') then
 				-- Reset the state machine
 			else
@@ -69,7 +63,7 @@ begin
 
         -- output values changed based on current state
         case(state) is
-            when reset_state =>
+            when reset =>
                 reset_tx <= '1';
                 reset_rx <= '1';
             when starting =>
@@ -85,17 +79,17 @@ begin
 	next_state_proc : process (state, received_signal, no_signal_timeout, resetting_time)
 	begin
         case(state) is
-            when reset_state =>
+            when reset =>
                 if(resetting_time = '1') then
                     next_state <= starting;
                 end if;
             when starting =>
-                if(received_signal = '1') then
+                if(signal_received = '1') then
                     next_state <= communicating;
                 end if;
             when communicating =>
-                if(no_signal_timeout = '1') then
-                    next_state <= reset_state;
+                if(no_signal_timeout) then
+                    next_state <= reset;
                 end if;
         end case;
 	end process next_state_proc;

@@ -1,0 +1,6 @@
+
+State Machine - |demo|state_machine:state_machine_port|state
+Name state.communicating state.starting state.reset_state 
+state.reset_state 0 0 0 
+state.starting 0 1 1 
+state.communicating 1 0 1 

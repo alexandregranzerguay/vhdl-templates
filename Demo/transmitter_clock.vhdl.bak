@@ -14,7 +14,7 @@ port(
 );
 end transmitter_clock;
 
-architecture rtl of transmitter_clock is
+architecture rtl of frequency_divider is
 	-- Internal signal declaration goes HERE
 	
 	-- the frequency of the input CLOCK

@@ -1,0 +1,370 @@
+Analysis & Synthesis report for demo
+Tue Aug 21 11:36:19 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |demo|state_machine:state_machine_port|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Port Connectivity Checks: "receiver:receiver_port"
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Aug 21 11:36:19 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; demo                                            ;
+; Top-level Entity Name              ; demo                                            ;
+; Family                             ; Cyclone IV GX                                   ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 12                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total GXB Receiver Channel PCS     ; 0                                               ;
+; Total GXB Receiver Channel PMA     ; 0                                               ;
+; Total GXB Transmitter Channel PCS  ; 0                                               ;
+; Total GXB Transmitter Channel PMA  ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; demo               ; demo               ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; transmitter_clock.vhdl           ; yes             ; User VHDL File  ; C:/Users/Alexandre/vhdl-quick-start-code/Demo/transmitter_clock.vhdl ;         ;
+; transmitter.vhdl                 ; yes             ; User VHDL File  ; C:/Users/Alexandre/vhdl-quick-start-code/Demo/transmitter.vhdl       ;         ;
+; timer.vhdl                       ; yes             ; User VHDL File  ; C:/Users/Alexandre/vhdl-quick-start-code/Demo/timer.vhdl             ;         ;
+; state_machine.vhdl               ; yes             ; User VHDL File  ; C:/Users/Alexandre/vhdl-quick-start-code/Demo/state_machine.vhdl     ;         ;
+; receiver.vhdl                    ; yes             ; User VHDL File  ; C:/Users/Alexandre/vhdl-quick-start-code/Demo/receiver.vhdl          ;         ;
+; demo.vhd                         ; yes             ; User VHDL File  ; C:/Users/Alexandre/vhdl-quick-start-code/Demo/demo.vhd               ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 12               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; input_signal     ;
+; Maximum fan-out          ; 1                ;
+; Total fan-out            ; 12               ;
+; Average fan-out          ; 0.50             ;
++--------------------------+------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |demo                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 12   ; 0            ; |demo               ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------+
+; State Machine - |demo|state_machine:state_machine_port|state                   ;
++---------------------+---------------------+----------------+-------------------+
+; Name                ; state.communicating ; state.starting ; state.reset_state ;
++---------------------+---------------------+----------------+-------------------+
+; state.reset_state   ; 0                   ; 0              ; 0                 ;
+; state.starting      ; 0                   ; 1              ; 1                 ;
+; state.communicating ; 1                   ; 0              ; 1                 ;
++---------------------+---------------------+----------------+-------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++------------------------------------------------------+----------------------------------------+
+; Register name                                        ; Reason for Removal                     ;
++------------------------------------------------------+----------------------------------------+
+; timer:timer_port|ticks[0]                            ; Stuck at GND due to stuck port data_in ;
+; timer:timer_port|after_1_us                          ; Stuck at GND due to stuck port data_in ;
+; timer:timer_port|ticks[1..31]                        ; Stuck at GND due to stuck port data_in ;
+; transmitter_clock:tx_clock_port|new_clock_temp       ; Lost fanout                            ;
+; transmitter_clock:tx_clock_port|counter[0..31]       ; Lost fanout                            ;
+; state_machine:state_machine_port|state.reset_state   ; Lost fanout                            ;
+; state_machine:state_machine_port|state.starting      ; Lost fanout                            ;
+; state_machine:state_machine_port|state.communicating ; Lost fanout                            ;
+; Total Number of Removed Registers = 69               ;                                        ;
++------------------------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                        ;
++------------------------------------------------+--------------------+----------------------------------------------+
+; Register name                                  ; Reason for Removal ; Registers Removed due to This Register       ;
++------------------------------------------------+--------------------+----------------------------------------------+
+; transmitter_clock:tx_clock_port|new_clock_temp ; Lost Fanouts       ; transmitter_clock:tx_clock_port|counter[31], ;
+;                                                ;                    ; transmitter_clock:tx_clock_port|counter[30], ;
+;                                                ;                    ; transmitter_clock:tx_clock_port|counter[29], ;
+;                                                ;                    ; transmitter_clock:tx_clock_port|counter[28], ;
+;                                                ;                    ; transmitter_clock:tx_clock_port|counter[27], ;
+;                                                ;                    ; transmitter_clock:tx_clock_port|counter[26], ;
+;                                                ;                    ; transmitter_clock:tx_clock_port|counter[25], ;
+;                                                ;                    ; transmitter_clock:tx_clock_port|counter[24], ;
+;                                                ;                    ; transmitter_clock:tx_clock_port|counter[23]  ;
+; transmitter_clock:tx_clock_port|counter[1]     ; Lost Fanouts       ; transmitter_clock:tx_clock_port|counter[0]   ;
++------------------------------------------------+--------------------+----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "receiver:receiver_port"                                                                        ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; received_signal ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Aug 21 11:36:14 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off demo -c demo
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file transmitter_clock.vhdl
+    Info (12022): Found design unit 1: transmitter_clock-rtl
+    Info (12023): Found entity 1: transmitter_clock
+Info (12021): Found 2 design units, including 1 entities, in source file transmitter.vhdl
+    Info (12022): Found design unit 1: transmitter-rtl
+    Info (12023): Found entity 1: transmitter
+Info (12021): Found 2 design units, including 1 entities, in source file timer.vhdl
+    Info (12022): Found design unit 1: timer-rtl
+    Info (12023): Found entity 1: timer
+Info (12021): Found 2 design units, including 1 entities, in source file state_machine.vhdl
+    Info (12022): Found design unit 1: state_machine-rtl
+    Info (12023): Found entity 1: state_machine
+Info (12021): Found 2 design units, including 1 entities, in source file receiver.vhdl
+    Info (12022): Found design unit 1: receiver-rtl
+    Info (12023): Found entity 1: receiver
+Info (12021): Found 2 design units, including 1 entities, in source file demo.vhd
+    Info (12022): Found design unit 1: demo-rtl
+    Info (12023): Found entity 1: demo
+Info (12127): Elaborating entity "demo" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at demo.vhd(93): used implicit default value for signal "received_signal_link" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at demo.vhd(100): used implicit default value for signal "send_signal_link" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "state_machine" for hierarchy "state_machine:state_machine_port"
+Warning (10541): VHDL Signal Declaration warning at state_machine.vhdl(28): used implicit default value for signal "start_timer_reset" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at state_machine.vhdl(28): used implicit default value for signal "start_timer_timeout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at state_machine.vhdl(28): used implicit default value for signal "reset_timer" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10631): VHDL Process Statement warning at state_machine.vhdl(85): inferring latch(es) for signal or variable "next_state", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "next_state.communicating" at state_machine.vhdl(85)
+Info (10041): Inferred latch for "next_state.starting" at state_machine.vhdl(85)
+Info (10041): Inferred latch for "next_state.reset_state" at state_machine.vhdl(85)
+Info (12128): Elaborating entity "transmitter" for hierarchy "transmitter:transmitter_port"
+Warning (10492): VHDL Process Statement warning at transmitter.vhdl(42): signal "count_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at transmitter.vhdl(43): signal "current_count" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at transmitter.vhdl(34): inferring latch(es) for signal or variable "signal_sent", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at transmitter.vhdl(34): inferring latch(es) for signal or variable "count_flag", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at transmitter.vhdl(34): inferring latch(es) for signal or variable "next_count", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "signal_sent" at transmitter.vhdl(34)
+Info (12128): Elaborating entity "transmitter_clock" for hierarchy "transmitter_clock:tx_clock_port"
+Warning (10540): VHDL Signal Declaration warning at transmitter_clock.vhdl(21): used explicit default value for signal "division_factor" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at transmitter_clock.vhdl(46): signal "new_clock_temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "receiver" for hierarchy "receiver:receiver_port"
+Warning (10541): VHDL Signal Declaration warning at receiver.vhdl(19): used implicit default value for signal "received_signal" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "timer" for hierarchy "timer:timer_port"
+Warning (10541): VHDL Signal Declaration warning at timer.vhdl(17): used implicit default value for signal "no_signal_timeout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10540): VHDL Signal Declaration warning at timer.vhdl(29): used explicit default value for signal "tick_1_us" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at timer.vhdl(56): signal "ticks" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (14025): LATCH primitive "state_machine:state_machine_port|next_state.starting_83" is permanently disabled
+Warning (14025): LATCH primitive "state_machine:state_machine_port|next_state.reset_state_94" is permanently disabled
+Warning (14025): LATCH primitive "state_machine:state_machine_port|next_state.communicating_72" is permanently disabled
+Warning (14025): LATCH primitive "state_machine:state_machine_port|next_state.starting_83" is permanently disabled
+Warning (14025): LATCH primitive "state_machine:state_machine_port|next_state.reset_state_94" is permanently disabled
+Warning (14025): LATCH primitive "state_machine:state_machine_port|next_state.communicating_72" is permanently disabled
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "signal_sent" is stuck at GND
+    Warning (13410): Pin "timer_out[0]" is stuck at GND
+    Warning (13410): Pin "timer_out[1]" is stuck at GND
+    Warning (13410): Pin "timer_out[2]" is stuck at GND
+    Warning (13410): Pin "timer_out[3]" is stuck at GND
+    Warning (13410): Pin "timer_out[4]" is stuck at GND
+    Warning (13410): Pin "timer_out[5]" is stuck at GND
+    Warning (13410): Pin "timer_out[6]" is stuck at GND
+    Warning (13410): Pin "timer_out[7]" is stuck at GND
+Info (17049): 36 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "input_signal"
+    Warning (15610): No output dependent on input pin "reset"
+    Warning (15610): No output dependent on input pin "clock"
+Info (21057): Implemented 12 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 9 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 4696 megabytes
+    Info: Processing ended: Tue Aug 21 11:36:19 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
+
+
